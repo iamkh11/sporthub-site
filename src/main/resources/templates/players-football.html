@@ -33,6 +33,7 @@
                     </div>
                 </div>
             </div>
+             </br>
         </div>
         <!--// Main Banner \\-->
         <!--// Main Content \\-->
@@ -55,7 +56,7 @@
                                                     <small th:text="${players.player_position}"></small>
                                                 </div>
                                                 <span class="ec-goal-counter ec-bgcolor" th:text="${players.player_number}"></span>
-                                                <span class="ec-plyer-info" th:text="${players.player_age}"></span>
+                                                <span class="ec-plyer-info" th:text="'Age : ' +   ${players.player_age} "></span>
                                             </div>
                                         </div>
                                     </li>

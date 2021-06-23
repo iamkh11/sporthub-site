@@ -1,16 +1,15 @@
 package com.kh.Webpfe.controllers;
 
-
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
-
-
+import com.kh.Webpfe.models.News;
 
 import com.kh.Webpfe.repositories.NewsRepository;
 
@@ -32,7 +31,7 @@ public class NewsController {
 	
 	
 		// show 
-	@GetMapping("/news-football" )
+	  @RequestMapping("/news-football")
 	    public String news(Model model) {
 		  
 		  
@@ -41,10 +40,8 @@ public class NewsController {
 	       
 	        return "/news-football";
 	    }
-	  
-	  
 	
-	  @GetMapping("/news-handball")
+	  @RequestMapping("/news-handball")
 	    public String newspost(Model model) {
 		  
 		  
@@ -55,8 +52,7 @@ public class NewsController {
 	    }
 	  
 	  
-	  
-	  @GetMapping("/manchester-united")
+	  @RequestMapping(value={"/manchester-united","/"})
 	    public String slider(Model model) {
 		  
 		  
@@ -66,8 +62,7 @@ public class NewsController {
 	        return "/manchester-united";
 	    }
 	 
-	  
-	  @GetMapping("/contact")
+	  @RequestMapping("/contact")
 	    public String contact(Model model) {
 		  
 		  

@@ -20,7 +20,7 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
  */
 @Configuration
 @EnableWebSecurity
-@ComponentScan(basePackages = {"com.kh.Webpfe"})
+@ComponentScan("com.kh.Webpfe.configs")
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
@@ -47,13 +47,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                
-               
-                
-                .antMatchers("/login").permitAll()
-                .antMatchers("/signup").permitAll()
-                
-                
                 .antMatchers("/contact/**").permitAll()
                 .antMatchers("/manchester-united/**").permitAll()
                 .antMatchers("/news-football/**").permitAll()
@@ -62,6 +55,17 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/players-handball/**").permitAll()
                 .antMatchers("/staff-football/**").permitAll()
                 .antMatchers("/staff-handball/**").permitAll()
+               
+                
+                
+                
+                
+                
+                .antMatchers("/login").permitAll()
+                .antMatchers("/signup").permitAll()
+                
+                
+              
                 
                 .antMatchers("/dashboard/**").hasAuthority("ADMIN").anyRequest()
                 
