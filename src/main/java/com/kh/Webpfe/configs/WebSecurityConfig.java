@@ -48,17 +48,21 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests()
                 
-                .antMatchers("/contact").permitAll()
-                .antMatchers("/manchester-united").permitAll()
-                .antMatchers("/news-football").permitAll()
-                .antMatchers("/news-handball").permitAll()
-                .antMatchers("/players-football").permitAll()
-                .antMatchers("/players-handball").permitAll()
-                .antMatchers("/staff-football").permitAll()
-                .antMatchers("/staff-handball").permitAll()
+               
                 
                 .antMatchers("/login").permitAll()
                 .antMatchers("/signup").permitAll()
+                
+                
+                .antMatchers("/contact/**").permitAll()
+                .antMatchers("/manchester-united/**").permitAll()
+                .antMatchers("/news-football/**").permitAll()
+                .antMatchers("/news-handball/**").permitAll()
+                .antMatchers("/players-football/**").permitAll()
+                .antMatchers("/players-handball/**").permitAll()
+                .antMatchers("/staff-football/**").permitAll()
+                .antMatchers("/staff-handball/**").permitAll()
+                
                 .antMatchers("/dashboard/**").hasAuthority("ADMIN").anyRequest()
                 
                 .authenticated().and().csrf().disable().formLogin().successHandler(customizeAuthenticationSuccessHandler)
@@ -68,6 +72,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and().logout()
                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
                 .logoutSuccessUrl("/login").and().exceptionHandling();
+        
+        
+       
+        
     }
 
     @Override
