@@ -51,6 +51,7 @@ public class NewsController {
 	        return "/news-handball";
 	    }
 	  
+	  
 	  @RequestMapping("/manchester-united")
 	    public String slider(Model model) {
 		  
