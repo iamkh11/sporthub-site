@@ -48,10 +48,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests()
                 
-                .antMatchers("/contact").permitAll()
-                .antMatchers("/manchester-united").permitAll()
-                .antMatchers("/news-football").permitAll()
-                .antMatchers("/news-handball").permitAll()
+                .antMatchers("../contact").permitAll()
+                .antMatchers("../manchester-united").permitAll()
+                .antMatchers("../news-football").permitAll()
+                .antMatchers("../news-handball").permitAll()
                 .antMatchers("/players-football").permitAll()
                 .antMatchers("/players-handball").permitAll()
                 .antMatchers("/staff-football").permitAll()
