@@ -1097,8 +1097,13 @@ address {font-style: italic;}
 
 /* MainBanner */
 .ec-mainbanner {
-	float: left;
+	
+	
+	display:block; margin-left:auto; margin-right:auto;
 	width: 100%;
+
+
+
 }
 .ec-transparent-color {
 	position: absolute;
@@ -1106,7 +1111,7 @@ address {font-style: italic;}
 	top: 0px;
 	width: 100%;
 	height: 100%;
-	background-color: #000;
+	background-color: #808080;
 	opacity: 0.88;
 }
 .ec-caption {
