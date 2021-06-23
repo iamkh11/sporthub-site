@@ -5,7 +5,8 @@ package com.kh.Webpfe.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
@@ -31,7 +32,7 @@ public class NewsController {
 	
 	
 		// show 
-	  @RequestMapping("/news-football")
+	@GetMapping("/news-football" )
 	    public String news(Model model) {
 		  
 		  
@@ -43,7 +44,7 @@ public class NewsController {
 	  
 	  
 	
-	  @RequestMapping("/news-handball")
+	  @GetMapping("/news-handball")
 	    public String newspost(Model model) {
 		  
 		  
@@ -55,7 +56,7 @@ public class NewsController {
 	  
 	  
 	  
-	  @RequestMapping("/manchester-united")
+	  @GetMapping("/manchester-united")
 	    public String slider(Model model) {
 		  
 		  
@@ -66,7 +67,7 @@ public class NewsController {
 	    }
 	 
 	  
-	  @RequestMapping("/contact")
+	  @GetMapping("/contact")
 	    public String contact(Model model) {
 		  
 		  
