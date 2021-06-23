@@ -50,9 +50,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 
                 
                 .antMatchers("/players-football").permitAll()
-                
-                
-                
+                .antMatchers("/players-handball").permitAll()
+                .antMatchers("/staff-football").permitAll()
+                .antMatchers("/staff-handball").permitAll()
                 
                 .antMatchers("/login").permitAll()
                 .antMatchers("/signup").permitAll()

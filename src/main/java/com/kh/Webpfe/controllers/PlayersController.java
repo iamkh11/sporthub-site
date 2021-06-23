@@ -45,6 +45,15 @@ public class PlayersController {
 	        return "players-football";
 	    }
 	  
+	  
+	  @RequestMapping("/players-handball")
+	    public String playersh(Model model) {
+	        model.addAttribute("players", playersRepository.findAll());
+	        
+	        
+	        return "players-handball";
+	    }
+	  
 	
 	    
 	   
