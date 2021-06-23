@@ -20,7 +20,7 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
  */
 @Configuration
 @EnableWebSecurity
-@ComponentScan("com.kh.Webpfe.configs")
+@ComponentScan(basePackages = {"com.kh.Webpfe"})
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
