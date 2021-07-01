@@ -55,8 +55,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/players-handball/**").permitAll()
                 .antMatchers("/staff-football/**").permitAll()
                 .antMatchers("/staff-handball/**").permitAll()
-               
-                
+                .antMatchers("/fixtures-foot/**").permitAll()
+                .antMatchers("/fixtures-hand/**").permitAll()
                 
                 
                 
