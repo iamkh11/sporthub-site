@@ -7,9 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.kh.Webpfe.repositories.MatchReposiroty;
-import com.kh.Webpfe.repositories.StadiumRepository;
-import com.kh.Webpfe.repositories.TeamRepository;
-import com.kh.Webpfe.repositories.TicketRepository;
+
 
 
 
@@ -20,14 +18,8 @@ public class MatchController {
 	@Autowired
 	private MatchReposiroty matchRepository;
 	
-	@Autowired
-	private TeamRepository teamRepository;
-
-	@Autowired
-	private  StadiumRepository stadiumRepository;
 	
-	@Autowired
-	private TicketRepository ticketRepository;
+	
 	
 	
 	
@@ -53,9 +45,7 @@ public class MatchController {
 			  
 		        model.addAttribute("match", matchRepository.findAll());
 		        
-		        model.addAttribute("stade", stadiumRepository.findAll());
-		        
-		        model.addAttribute("team", teamRepository.findAll());
+		      
 		       
 		        return "fixtures-hand";
 		    }

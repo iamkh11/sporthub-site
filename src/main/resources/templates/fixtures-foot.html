@@ -63,10 +63,14 @@
                                         <div class="ec-cell"><span th:text="${match.date}"> </span> <span th:text="${match.time}" ></div>
                                         
                                         <div class="ec-cell">
-                                            <a href="#" class="ec-fixture-flag"><span th:text="${match.home_team}"> </span></a>
+                                            <a href="#" class="ec-fixture-flag">
+                                            <img width="75" height="75"   th:src="${match.home_team_logo}">
+                                           <span th:text="${match.home_team}">  </span></a>
                                             <span class="ec-fixture-vs"><small th:text="${match.status}" ></small></span>
 											
-                                            <a href="#" class="ec-fixture-flag ec-next-flag"><span th:text="${match.away_team}"> </span></a>
+                                            <a href="#" class="ec-fixture-flag ec-next-flag">
+                                            <img width="75" height="75"   th:src="${match.away_team_logo}">
+                                             <span th:text="${match.away_team}"></span></a>
                                         </div>
                                         
                                            <div class="ec-cell"><span th:text="${match.stadium}"> </span></div>
